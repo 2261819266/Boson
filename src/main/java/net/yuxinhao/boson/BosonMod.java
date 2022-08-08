@@ -24,16 +24,16 @@ public class BosonMod implements ModInitializer {
 
 
 	public static final Item 
-		ObsidianIngot = new Item(new FabricItemSettings().group(ModGroups.ITEMS))
+		OBSIDIAN_INGOT = new Item(new FabricItemSettings().group(ModGroups.ITEMS))
 		;
 
 	public static final Block 
-		ObsidianBlock = new Block(FabricBlockSettings.of(Material.STONE)
+		OBSIDIAN_BLOCK = new Block(FabricBlockSettings.of(Material.STONE)
 			.strength(5, 1200).sounds(BlockSoundGroup.STONE).requiresTool())
 		;
 	
 	public static final BlockItem 
-		ObsidianBlockItem = new BlockItem(ObsidianBlock, new FabricItemSettings().group(ModGroups.BLOCKS));
+		OBSIDIAN_BLOCK_ITEM = new BlockItem(OBSIDIAN_BLOCK, new FabricItemSettings().group(ModGroups.BLOCKS));
 
 	@Override
 	public void onInitialize() {
@@ -41,10 +41,10 @@ public class BosonMod implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_ingot"), ObsidianIngot);
-		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_block"), ObsidianBlockItem);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_ingot"), OBSIDIAN_INGOT);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_block"), OBSIDIAN_BLOCK_ITEM);
 
-		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "obsidian_block"), ObsidianBlock);
+		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "obsidian_block"), OBSIDIAN_BLOCK);
 
 		LOGGER.info("Hello Fabric world!");
 	}
