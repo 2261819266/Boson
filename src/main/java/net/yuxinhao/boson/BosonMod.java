@@ -28,9 +28,12 @@ public class BosonMod implements ModInitializer {
 		;
 
 	public static final Block 
-		ObsidianBlock = new Block(FabricBlockSettings.of(Material.STONE).strength(5, 1200).sounds(BlockSoundGroup.STONE));
+		ObsidianBlock = new Block(FabricBlockSettings.of(Material.STONE)
+			.strength(5, 1200).sounds(BlockSoundGroup.STONE))
+		;
 	
-	public static final BlockItem ObsidianBlockItem = new BlockItem(ObsidianBlock, new FabricItemSettings().group(ModGroups.ITEMS));
+	public static final BlockItem 
+		ObsidianBlockItem = new BlockItem(ObsidianBlock, new FabricItemSettings().group(ModGroups.BLOCKS));
 
 	@Override
 	public void onInitialize() {
