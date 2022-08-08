@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "boson:block/some_block"
+        "all": "boson:block/obsidian_block"
     }
 }
