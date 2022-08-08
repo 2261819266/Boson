@@ -83,21 +83,6 @@ public class BosonMod implements ModInitializer {
 			.addItem("hoe", OBSIDIAN_HOE)
 		;
 
-		// Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_ingot"), OBSIDIAN_INGOT);
-		// Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_block"), OBSIDIAN_BLOCK_ITEM);
-
-		// Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_helmet"), OBSIDIAN_HELMET);
-		// Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_chestplate"), OBSIDIAN_CHESTPLATE);
-		// Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_leggings"), OBSIDIAN_LEGGINGS);
-		// Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_boots"), OBSIDIAN_BOOTS);
-
-		// Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_sword"), OBSIDIAN_SWORD);
-		// Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_shovel"), OBSIDIAN_SHOVEL);
-		// Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_axe"), OBSIDIAN_AXE);
-		// Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_pickaxe"), OBSIDIAN_PICKAXE);
-		// Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_hoe"), OBSIDIAN_HOE);
-
-
 		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "obsidian_block"), OBSIDIAN_BLOCK);
 
 		LOGGER.info("Hello Fabric world!");

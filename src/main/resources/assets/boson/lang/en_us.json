@@ -4,6 +4,11 @@
     "item.boson.obsidian_chestplate": "Obsidian Chestplate",
     "item.boson.obsidian_leggings": "Obsidian Leggings",
     "item.boson.obsidian_boots": "Obsidian Boots",
+    "item.boson.obsidian_sword": "Obsidian Sword",
+    "item.boson.obsidian_axe": "Obsidian Axe",
+    "item.boson.obsidian_pickaxe": "Obsidian Pickaxe",
+    "item.boson.obsidian_shovel": "Obsidian Shovel",
+    "item.boson.obsidian_hoe": "Obsidian Hoe",
 
     "block.boson.obsidian_block": "Obsidian Block"
 }
