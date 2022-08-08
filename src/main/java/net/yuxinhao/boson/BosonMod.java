@@ -5,9 +5,14 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -35,6 +40,15 @@ public class BosonMod implements ModInitializer {
 	public static final BlockItem 
 		OBSIDIAN_BLOCK_ITEM = new BlockItem(OBSIDIAN_BLOCK, new FabricItemSettings().group(ModGroups.BLOCKS));
 
+	public static final ArmorMaterial ARMOR_MATERIAL = new ArmorMaterials("obsidian", 35, new int[]{4, 7, 9, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2f, 0.1f, Ingredient.ofItems(BosonMod.OBSIDIAN_INGOT));
+	public static final Item 
+		// OBSIDIAN = new Item(new Item.Settings().group(ModGroups.ITEMS)),
+		OBSIDIAN_HELMET = new ArmorItem(ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Settings().group(ModGroups.ITEMS)),
+		OBSIDIAN_CHESTPLATE = new ArmorItem(ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Settings().group(ModGroups.ITEMS)),
+		OBSIDIAN_LEGGINGS = new ArmorItem(ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Settings().group(ModGroups.ITEMS)),
+		OBSIDIAN_BOOTS = new ArmorItem(ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Settings().group(ModGroups.ITEMS));
+	 
+
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
@@ -43,6 +57,10 @@ public class BosonMod implements ModInitializer {
 
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_ingot"), OBSIDIAN_INGOT);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_block"), OBSIDIAN_BLOCK_ITEM);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_helmet"), OBSIDIAN_HELMET);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_chestplate"), OBSIDIAN_CHESTPLATE);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_leggings"), OBSIDIAN_LEGGINGS);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_boots"), OBSIDIAN_BOOTS);
 
 		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "obsidian_block"), OBSIDIAN_BLOCK);
 

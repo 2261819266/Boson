@@ -4,23 +4,23 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
+// import net.minecraft.sound.SoundEvents;
 
-public enum ArmorMaterials implements ArmorMaterial {
+public class ArmorMaterials implements ArmorMaterial {
     
-	OBSIDIAN("obsidian", 35, new int[]{4, 7, 9, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2f, 0.1f, Ingredient.ofItems(BosonMod.OBSIDIAN_INGOT));
+	// OBSIDIAN("obsidian", 35, new int[]{4, 7, 9, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2f, 0.1f, Ingredient.ofItems(BosonMod.OBSIDIAN_INGOT));
 
-	private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private final String name;
-    private final int durabilityMultiplier;
-    private final int[] protectionAmounts;
-    private final int enchantability;
-    private final SoundEvent equipSound;
-    private final float toughness;
-    private final float knockbackResistance;
-    private final Ingredient repairIngredientSupplier;
+	public static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
+    public final String name;
+    public final int durabilityMultiplier;
+    public final int[] protectionAmounts;
+    public final int enchantability;
+    public final SoundEvent equipSound;
+    public final float toughness;
+    public final float knockbackResistance;
+    public final Ingredient repairIngredientSupplier;
 
-    private ArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Ingredient repairIngredientSupplier) {
+    public ArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Ingredient repairIngredientSupplier) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;
