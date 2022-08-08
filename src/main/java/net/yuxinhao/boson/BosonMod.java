@@ -2,7 +2,12 @@ package net.yuxinhao.boson;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.Block;
+import net.minecraft.block.Material;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -17,7 +22,15 @@ public class BosonMod implements ModInitializer {
 
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	public static final Item ObsidianIngot = new Item(new FabricItemSettings().group(ModGroups.ITEMS));
+
+	public static final Item 
+		ObsidianIngot = new Item(new FabricItemSettings().group(ModGroups.ITEMS))
+		;
+
+	public static final Block 
+		ObsidianBlock = new Block(FabricBlockSettings.of(Material.STONE).strength(5, 1200).sounds(BlockSoundGroup.STONE));
+	
+	public static final BlockItem ObsidianBlockItem = new BlockItem(ObsidianBlock, new FabricItemSettings().group(ModGroups.ITEMS));
 
 	@Override
 	public void onInitialize() {
@@ -26,6 +39,9 @@ public class BosonMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_ingot"), ObsidianIngot);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "obsidian_block"), ObsidianBlockItem);
+
+		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "obsidian_block"), ObsidianBlock);
 
 		LOGGER.info("Hello Fabric world!");
 	}
