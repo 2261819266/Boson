@@ -9,7 +9,7 @@ import net.minecraft.sound.SoundEvents;
 
 public enum ArmorMaterials implements ArmorMaterial {
     
-	OBSIDIAN("obsidian", 35, new int[]{4, 7, 9, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2f, 0.1f, Ingredient.ofItems(BosonMod.OBSIDIAN_INGOT));
+	OBSIDIAN("obsidian", 35, new int[]{4, 7, 9, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2f, 0.05f, Ingredient.ofItems(BosonMod.OBSIDIAN_INGOT));
 
 	public static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
     public final String name;
