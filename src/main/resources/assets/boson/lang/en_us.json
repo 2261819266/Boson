@@ -1,4 +1,9 @@
 {
     "item.boson.obsidian_ingot": "Obsidian Ingot",
+    "item.boson.obsidian_helmet": "Obsidian Helmet",
+    "item.boson.obsidian_chestplate": "Obsidian Chestplate",
+    "item.boson.obsidian_leggings": "Obsidian Leggings",
+    "item.boson.obsidian_boots": "Obsidian Boots",
+
     "block.boson.obsidian_block": "Obsidian Block"
 }
