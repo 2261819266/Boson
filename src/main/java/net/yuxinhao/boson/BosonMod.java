@@ -29,7 +29,7 @@ public class BosonMod implements ModInitializer {
 
 	public static final Block 
 		ObsidianBlock = new Block(FabricBlockSettings.of(Material.STONE)
-			.strength(5, 1200).sounds(BlockSoundGroup.STONE))
+			.strength(5, 1200).sounds(BlockSoundGroup.STONE).requiresTool())
 		;
 	
 	public static final BlockItem 
