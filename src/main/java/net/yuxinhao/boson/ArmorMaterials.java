@@ -5,10 +5,11 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 // import net.minecraft.sound.SoundEvents;
+import net.minecraft.sound.SoundEvents;
 
-public class ArmorMaterials implements ArmorMaterial {
+public enum ArmorMaterials implements ArmorMaterial {
     
-	// OBSIDIAN("obsidian", 35, new int[]{4, 7, 9, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2f, 0.1f, Ingredient.ofItems(BosonMod.OBSIDIAN_INGOT));
+	OBSIDIAN("obsidian", 35, new int[]{4, 7, 9, 4}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2f, 0.1f, Ingredient.ofItems(BosonMod.OBSIDIAN_INGOT));
 
 	public static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
     public final String name;
@@ -20,7 +21,7 @@ public class ArmorMaterials implements ArmorMaterial {
     public final float knockbackResistance;
     public final Ingredient repairIngredientSupplier;
 
-    public ArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Ingredient repairIngredientSupplier) {
+    private ArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Ingredient repairIngredientSupplier) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;
