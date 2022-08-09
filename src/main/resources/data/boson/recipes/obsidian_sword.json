@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "#",
+        "S"
+    ],
+    "key": {
+        "#": {
+            "item": "boson:obsidian_ingot"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "boson:obsidian_sword"
+    }
+}
